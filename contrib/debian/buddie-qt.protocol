@@ -1,0 +1,11 @@
+[Protocol]
+exec=buddie-qt '%u'
+protocol=buddie
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

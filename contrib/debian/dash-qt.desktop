@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Buddie
+Comment=Buddie P2P Cryptocurrency
+Comment[fr]=Buddie, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Buddie, eşten eşe kriptografik sanal para birimi
+Exec=buddie-qt %u
+Terminal=false
+Type=Application
+Icon=buddie128
+MimeType=x-scheme-handler/buddie;
+Categories=Office;Finance;

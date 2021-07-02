@@ -1,0 +1,22 @@
+[Unit]
+Description=Buddie's distributed currency daemon
+After=network.target
+
+[Service]
+User=buddiecore
+Group=buddiecore
+
+Type=forking
+PIDFile=/var/lib/buddied/buddied.pid
+ExecStart=/usr/bin/buddied -daemon -pid=/var/lib/buddied/buddied.pid \
+-conf=/etc/buddiecore/buddie.conf -datadir=/var/lib/buddied -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

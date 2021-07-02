@@ -1,0 +1,6 @@
+usr/local/bin/buddie-qt usr/bin
+share/pixmaps/buddie32.xpm usr/share/pixmaps
+share/pixmaps/buddie16.xpm usr/share/pixmaps
+share/pixmaps/buddie128.png usr/share/pixmaps
+debian/buddie-qt.desktop usr/share/applications
+debian/buddie-qt.protocol usr/share/kde4/services/
