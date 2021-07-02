@@ -95,7 +95,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0001].nThreshold = 3226; // 80% of 4032
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000001");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x000003fd1dff397d1be86183efd9e13f0316b5f5a3082bac91975a421bc43021");
@@ -105,10 +105,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0x78; //s
-        pchMessageStart[1] = 0x75; //w
-        pchMessageStart[2] = 0x69; //a
-        pchMessageStart[3] = 0x6b; //m
+        pchMessageStart[0] = 0x71; //s
+        pchMessageStart[1] = 0x73; //w
+        pchMessageStart[2] = 0x66; //a
+        pchMessageStart[3] = 0x6c; //m
 	    pchMessageStart[4] = 0x76; //p    
         vAlertPubKey = ParseHex("047738e763b45593b3bc080cfd2ec07ce725d2c39b18e4bccced4ed75856afa15e88399cc894bbe9f10d98dd715081a27d3c45e5e7382f07c4c6bd32a9acda5c7d");
         nDefaultPort = 33333;
@@ -123,8 +123,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0xde4fe11d6d0c735a192d4e6eed593ad575ccd671ff4ff0d9188e347e067d028d"));
 
         vSeeds.clear();
-       vSeeds.push_back(CDNSSeedData("theminingpool.co.uk", "theminingpool.co.uk"));
-	vSeeds.push_back(CDNSSeedData("77.68.72.248", "77.68.72.248"));
+      // vSeeds.push_back(CDNSSeedData("theminingpool.co.uk", "theminingpool.co.uk"));
+	//vSeeds.push_back(CDNSSeedData("77.68.72.248", "77.68.72.248"));
 
 
         // Buddie addresses start with 's'
@@ -143,10 +143,10 @@ public:
 
         //vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
-         fMiningRequiresPeers = true;
+         fMiningRequiresPeers = false;
         fDefaultConsistencyChecks = false;
-        fRequireStandard = true;
-        fMineBlocksOnDemand = false;
+        fRequireStandard = false;
+        fMineBlocksOnDemand = true;
         fTestnetToBeDeprecatedFieldRPC = false;
 
 
